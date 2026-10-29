@@ -1,0 +1,52 @@
+media:
+  input: images/uploads
+  output: /images/uploads
+content:
+  - name: photos
+    label: Photographs
+    type: collection
+    path: content/photos
+    format: json
+    filename: '{primary}.json'
+    view:
+      fields: [title, category, image]
+      primary: title
+      sort: [order, title]
+    fields:
+      - name: title
+        label: Photo title
+        type: string
+        required: true
+      - name: category
+        label: Gallery
+        type: select
+        options:
+          - { label: Street, value: Street }
+          - { label: Landscapes, value: Landscapes }
+          - { label: Other, value: Other }
+          - { label: Portraits, value: Portraits }
+          - { label: Travel, value: Travel }
+          - { label: Carnies, value: Carnies }
+        required: true
+      - name: image
+        label: Photograph
+        type: image
+        required: true
+      - name: order
+        label: Display order (lower numbers first)
+        type: number
+        default: 100
+  - name: site
+    label: Website text and settings
+    type: file
+    path: content/site.json
+    fields:
+      - { name: eyebrow, label: Small heading, type: string }
+      - { name: headline, label: Main headline (use | for line break), type: string }
+      - { name: intro, label: Homepage introduction, type: text }
+      - { name: featured_image, label: Featured homepage photograph, type: image }
+      - { name: featured_caption, label: Featured image caption, type: string }
+      - { name: about, label: About text, type: text }
+      - { name: about_image, label: About image, type: image }
+      - { name: contact_intro, label: Contact introduction, type: text }
+      - { name: email, label: Contact email, type: string }
