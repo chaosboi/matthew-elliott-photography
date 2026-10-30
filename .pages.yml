@@ -18,9 +18,9 @@ content:
         type: string
         required: true    
       - name: category
-      label: Gallery
-      type: string
-      required: true
+        label: Gallery
+        type: string
+        required: true
       - name: image
         label: Photograph
         type: image
