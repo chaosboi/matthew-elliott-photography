@@ -19,7 +19,9 @@ content:
         required: true    
       - name: category
         label: Gallery
-        type: string
+        type: select
+        options:
+          values: [Street, Landscapes, Other, Portraits, Travel, Carnies]
         required: true
       - name: image
         label: Photograph
