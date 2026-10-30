@@ -21,7 +21,7 @@ content:
         label: Gallery
         type: select
               options:
-        values:
+        values: 
           - { label: Street, value: Street }
           - { label: Landscapes, value: Landscapes }
           - { label: Other, value: Other }
