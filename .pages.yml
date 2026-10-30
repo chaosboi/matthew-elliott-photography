@@ -17,18 +17,24 @@ content:
         label: Photo title
         type: string
         required: true
-      - name: category
-        label: Gallery
-        type: select
-              options:
-        values: 
-          - { label: Street, value: Street }
-          - { label: Landscapes, value: Landscapes }
-          - { label: Other, value: Other }
-          - { label: Portraits, value: Portraits }
-          - { label: Travel, value: Travel }
-          - { label: Carnies, value: Carnies }
-        required: true
+    - name: category
+      label: Gallery
+      type: select
+      options:
+        values:
+          - label: Street
+            value: Street
+          - label: Landscapes
+            value: Landscapes
+          - label: Other
+            value: Other
+          - label: Portraits
+            value: Portraits
+          - label: Travel
+            value: Travel
+          - label: Carnies
+            value: Carnies
+      required: true
       - name: image
         label: Photograph
         type: image
