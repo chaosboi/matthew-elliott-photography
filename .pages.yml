@@ -20,7 +20,8 @@ content:
       - name: category
         label: Gallery
         type: select
-        options:
+              options:
+        values:
           - { label: Street, value: Street }
           - { label: Landscapes, value: Landscapes }
           - { label: Other, value: Other }
