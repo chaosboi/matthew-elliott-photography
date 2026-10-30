@@ -16,7 +16,8 @@ content:
       - name: title
         label: Photo title
         type: string
-        required: true    - name: category
+        required: true    
+      - name: category
       label: Gallery
       type: select
       options:
