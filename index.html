@@ -24,13 +24,14 @@
     .gallery-back{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:32px;border-bottom:1px solid var(--ink);padding-bottom:8px}
     .photo-grid{columns:3 240px;column-gap:22px}.photo-tile{display:block;width:100%;margin:0 0 22px;border:0;padding:0;background:none;cursor:zoom-in;break-inside:avoid}
     .photo-tile img{display:block;width:100%;height:auto;transition:filter .25s}.photo-tile:hover img{filter:brightness(.9)}
-    .empty{font-size:14px;color:var(--muted);line-height:1.8}.about{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}.about img{width:100%;height:480px;object-fit:cover}.about p{max-width:500px;line-height:1.9;color:#68665f}
+    .empty{font-size:14px;color:var(--muted);line-height:1.8}.about{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}.about img{width:100%;height:auto;object-fit:contain}.about p{max-width:500px;line-height:1.9;color:#68665f}
+    .recognition{margin-top:85px;max-width:850px}.recognition h3{font-family:Georgia,serif;font-size:clamp(28px,3vw,40px);font-weight:400;letter-spacing:-.04em;margin:0 0 28px}.award{border-top:1px solid var(--line);padding:20px 0}.award h4{font-size:14px;font-weight:600;margin:0 0 10px}.award p{font-size:14px;line-height:1.8;color:#68665f;margin:5px 0}
     .link{display:inline-block;border-bottom:1px solid var(--ink);padding-bottom:8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:18px}
     footer{border-top:1px solid var(--line);padding:35px 5%;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
     .viewer{position:fixed;inset:0;background:rgba(16,16,15,.97);z-index:30;display:none;align-items:center;justify-content:center;padding:65px 65px 35px;color:white}.viewer.open{display:flex}
     .viewer img{max-width:100%;max-height:calc(100dvh - 100px);object-fit:contain}.viewer button{position:absolute;border:0;background:transparent;color:white;font-size:32px;cursor:pointer;padding:12px}.close{right:18px;top:12px}.prev{left:8px;top:50%}.next{right:8px;top:50%}
     .hidden{display:none!important}#work,#about,#contact{scroll-margin-top:115px}
-    @media(max-width:700px){.head{padding:18px 5%;align-items:flex-start;flex-direction:column;gap:20px}nav{gap:20px;flex-wrap:wrap}.hero{padding-top:55px}.section{padding-bottom:70px}.cover-list{gap:48px}.photo-grid{columns:2 145px;column-gap:12px}.photo-tile{margin-bottom:12px}.about{grid-template-columns:1fr}.about img{height:320px}.viewer{padding:65px 40px 35px}footer{flex-direction:column}}
+    @media(max-width:700px){.head{padding:18px 5%;align-items:flex-start;flex-direction:column;gap:20px}nav{gap:20px;flex-wrap:wrap}.hero{padding-top:55px}.section{padding-bottom:70px}.cover-list{gap:48px}.photo-grid{columns:2 145px;column-gap:12px}.photo-tile{margin-bottom:12px}.about{grid-template-columns:1fr}.about img{height:auto}.viewer{padding:65px 40px 35px}footer{flex-direction:column}}
     @media(max-width:400px){.photo-grid{columns:1}}
   </style>
 </head>
@@ -39,7 +40,14 @@
   <main id="home">
     <section class="hero" id="hero"><div class="eyebrow">A personal collection of photographs</div><h1>Moments,<br><em>observed.</em></h1><p class="intro"></p></section>
     <section class="section" id="work"><div class="section-head"><h2 id="workHeading">Galleries</h2><p id="workSubheading">Explore the collections</p></div><div id="covers" class="cover-list"></div><div id="galleryPage" class="hidden"><a class="gallery-back" href="#work">← All galleries</a><div id="gallery" class="photo-grid"></div></div></section>
-    <section class="section" id="about"><div class="section-head"><h2>Behind the lens</h2><p>About the photographer</p></div><div class="about"><img alt="About the photographer" loading="lazy"><div><div class="eyebrow">Matthew Elliott Photography</div><h2>Finding beauty<br>in the everyday.</h2><p></p></div></div></section>
+    <section class="section" id="about"><div class="section-head"><h2>Behind the lens</h2><p>About the photographer</p></div><div class="about"><img alt="About the photographer" loading="lazy"><div><div class="eyebrow">Matthew Elliott Photography</div><h2>Finding beauty<br>in the everyday.</h2><p></p></div></div><div class="recognition"><h3>Recognition &amp; Publications</h3>
+      <div class="award"><h4>2017 — Ipswich Show</h4><p>Highly Commended, People — <em>Fergie in the Grass</em></p><p>Merit, Open Colour — <em>Walking the Fur Babies</em> and <em>Dad’s First Touch</em></p></div>
+      <div class="award"><h4>2014 — Fairfax / Sydney Morning Herald / The Age Clique Photography Collective</h4><p>March Featured · May Finalist · July Highly Commended · 2014 Overall Finalist</p></div>
+      <div class="award"><h4>2014 — Ipswich Show</h4><p>3rd Place, Open — <em>Rounding Up the Horses</em></p><p>Merit, Colour Prints — <em>Afternoon Shower</em> and <em>Leading the Horse</em></p></div>
+      <div class="award"><h4>2013 — Ipswich Show</h4><p>2nd Place, People — <em>Blacksmith</em></p></div>
+      <div class="award"><h4>2012 — G-Street Photography Contest</h4><p>Winner, Popular Choice Mobile Category. No Vacancy Gallery, QV Building, Melbourne — 19 April 2012.</p></div>
+      <div class="award"><h4>Publication — Jenny’s Coffee House: After Yenni</h4><p>Photograph featured on the back cover of the autobiography by Eugenia Jenny Williams, published by Transit Lounge.</p></div>
+    </div></section>
     <section class="section" id="contact"><div class="section-head"><h2>Say hello.</h2></div><p class="intro"></p><a class="link" id="emailLink" href="mailto:">Get in touch</a></section>
   </main>
   <footer><span>© <span id="year"></span> Matthew Elliott Photography</span><span>chaosboi.com · Made for the moments worth keeping.</span></footer>
@@ -58,7 +66,7 @@
     const heading=document.querySelector('.hero h1');heading.replaceChildren();
     (site.headline||'Moments,|observed.').split('|').forEach((part,i)=>{if(i)heading.appendChild(document.createElement('br'));const node=document.createElement(i?'em':'span');node.textContent=part;heading.appendChild(node)});
     setText('.hero .intro',site.intro||'');setText('.about p',site.about||'');setText('#contact .intro',site.contact_intro||'For enquiries, collaborations or simply to talk photography, get in touch.');
-    document.querySelector('.about img').src=site.about_image||'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1100&q=80';
+    document.querySelector('.about img').src=site.about_image||'images/about-matthew.jpg';
     const email=site.email||'';byId('emailLink').href=email?'mailto:'+email:'#contact';byId('emailLink').textContent=email||'Contact email coming soon';
     byId('year').textContent=new Date().getFullYear();
     const covers=byId('covers'),gallery=byId('gallery'),galleryPage=byId('galleryPage'),viewer=byId('viewer');
@@ -90,3 +98,4 @@
   </script>
 </body>
 </html>
+
