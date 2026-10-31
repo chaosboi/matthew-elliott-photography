@@ -30,7 +30,11 @@ content:
       - name: order
         label: Display order (lower numbers first)
         type: number
-        default: 100
+        default: 100  
+      - name: cover
+        label: Use as gallery cover on homepage
+        type: boolean
+        default: false
   - name: site
     label: Website text and settings
     type: file
