@@ -21,7 +21,7 @@ content:
         label: Gallery
         type: select
         options:
-          values: [Street, Landscapes, Other, Portraits, Travel, Carnies]
+          values: [Street, Landscapes, Other, Portraits, Travel, Carnies, Animals]
         required: true
       - name: image
         label: Photograph
