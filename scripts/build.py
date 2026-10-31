@@ -8,6 +8,6 @@ for path in (root/'content/photos').glob('*.json'):
         photos.append({'title':p.get('title','Untitled'),'category':p['category'],'src':p['image'],'order':p.get('order',100)})
 photos.sort(key=lambda p:(p['order'],p['title']))
 site=json.loads((root/'content/site.json').read_text(encoding='utf-8'))
-data={'site':site,'photos':photos,'categories':['Street','Landscapes','Other','Portraits','Travel','Carnies']}
+data={'site':site,'photos':photos,'categories':['Street','Landscapes','Other','Portraits','Travel','Carnies','Animals']}
 (root/'gallery-data.js').write_text('window.PORTFOLIO_DATA = '+json.dumps(data,ensure_ascii=False)+';\n',encoding='utf-8')
 print(f'Built gallery with {len(photos)} photographs')
